@@ -1,33 +1,45 @@
 /* Basic Reset */
+.hero-section {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 600px;
+  border-radius: 3rem;
+  overflow: hidden;
+}
 
-  
-  .hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #fff;
-    // padding: 2rem;
-    border-radius: 3rem;
-    overflow: hidden;
-  }
-  
-  .hero-text h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
-  
-  .highlight {
-    color: #f6a823;
-  }
-  
-  .homeimg {
-    border-radius: 1rem;
-    height: auto;
-    width: 45Vw;
-    z-index: -1;
+.homeimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3rem;
+  margin: 23px;
+}
 
-  }
-  
+.hero-text {
+  position: absolute;
+  top: 70%;
+  left:22%;
+  transform: translate(-50%, -50%);
+  text-align: start;
+  color: black;
+  z-index: 1;
+  padding: 1rem 2rem;
+  // background: rgba(237, 183, 183, 0.4); /* Optional semi-transparent background */
+  border-radius: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.highlight {
+  color: #f6a823;
+  font-size: 60px;
+}
+
   .subtitle {
     text-align: center;
     font-size: 2rem;
@@ -52,7 +64,7 @@
   }
   
   .category-filters .active:hover {
-    background: #111;
+    background: orange;
     color: #fff;
   }
   
@@ -74,8 +86,10 @@
   }
   
   .recipe-card img {
-    width: 100%;
-    height: auto;
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+    aspect-ratio: auto;
     border-radius: 0.75rem;
     margin-bottom: 1rem;
   }
@@ -99,4 +113,13 @@
     cursor: pointer;
     font-size: 0.9rem;
   }
+  .recipe-card button:hover{
+    background-color: orange;
+  }
+.advtxt{
+  font-size: 80px;
+}
+.qoutetxt{
+  font-size: 30px;
+}
   

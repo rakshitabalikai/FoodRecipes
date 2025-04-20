@@ -1,0 +1,124 @@
+/* Basic Reset */
+.hero-section {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 600px;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.homeimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3rem;
+  margin: 23px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 70%;
+  left:22%;
+  transform: translate(-50%, -50%);
+  text-align: start;
+  color: black;
+  z-index: 1;
+  padding: 1rem 2rem;
+  // background: rgba(237, 183, 183, 0.4); /* Optional semi-transparent background */
+  border-radius: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.highlight {
+  color: #f6a823;
+  font-size: 60px;
+}
+
+  .subtitle {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+  }
+  
+  .category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-bottom: 2rem;
+  }
+  
+  .category-filters button {
+    background: #f3f3f3;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .category-filters .active:hover {
+    background: #111;
+    color: #fff;
+  }
+  
+  .recipes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 2rem 3rem;
+    padding: 20px;
+  }
+  
+  .recipe-card {
+    background: #f9f9f9;
+    border: 1px solid;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .recipe-card img {
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+    aspect-ratio: auto;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .recipe-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .recipe-card p {
+    color: #888;
+    margin-bottom: 0.75rem;
+  }
+  
+  .recipe-card button {
+    background: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+.advtxt{
+  font-size: 80px;
+}
+.qoutetxt{
+  font-size: 30px;
+}
+  

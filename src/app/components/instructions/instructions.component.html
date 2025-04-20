@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="header">
+    <span>
+      <h1>{{ recipe.title }}</h1>
+      <h3>{{ recipe.subtitle }}</h3>
+    </span>
+      <div class="rating">
+        <ng-container *ngFor="let star of [].constructor(5); let i = index">
+          <span [class.filled]="i < recipe.rating">★</span>
+        </ng-container>
+      </div>
+    </div>
+  
+    <div class="image">
+      <img src="/apple1.jpg" alt="Sweet apple squares" />
+    </div>
+  
+    <div class="info">
+      <span>{{ recipe.servings }} servings</span> · 
+      <span>{{ recipe.time }}</span>
+    </div>
+  
+    <div class="content">
+      <div class="ingredients">
+        <h4>INGREDIENTS</h4>
+        <ul>
+          <li *ngFor="let item of recipe.ingredients">{{ item }}</li>
+        </ul>
+      </div>
+  
+      <div class="directions">
+        <h4>DIRECTIONS</h4>
+        <ol>
+          <li *ngFor="let step of recipe.directions">{{ step }}</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  
