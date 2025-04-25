@@ -1,22 +1,8 @@
 <div class="recipes-grid">
-  <div class="recipe-card">
-    <img src="salad.jpg" alt="Fresh Salad" />
-    <h3>Fresh Salad with Tahini Sauce</h3>
-    <p>👁️ 250+</p>
-    <button type="button"  routerLink="/instructions">See Complete Recipe</button>
-  </div>
-
-  <div class="recipe-card">
-    <img src="chilichicken.jpg" alt="Chili con Carne" />
-    <h3>Chili con Carne with Nachos Chips</h3>
-    <p>👁️ 150+</p>
-    <button routerLink="/instructions">See Complete Recipe</button>
-  </div>
-
-  <div class="recipe-card">
-    <img src="koreankimchi.jpg" alt="Korean Kimchi" />
-    <h3>Sour & Spicy Korean Kimchi</h3>
-    <p>👁️ 200+</p>
-    <button routerLink="/instructions">See Complete Recipe</button>
+  <div class="recipe-card" *ngFor="let recipe of recipes">
+    <img [src]="recipe.image" [alt]="recipe.title" />
+    <h3>{{ recipe.title }}</h3>
+    <p>👁️ 250+</p> <!-- You can replace with dynamic view count if available -->
+    <!-- <button type="button" [routerLink]="['/instructions', recipe.id]">See Complete Recipe</button> -->
   </div>
 </div>
