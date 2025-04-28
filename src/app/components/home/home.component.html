@@ -9,38 +9,17 @@
 
 
 <h2 class="subtitle">What to <span class="highlight">Cook</span>?</h2>
-
 <div class="category-filters">
-  <button class="active">🍲 All Types</button>
-  <button class="active">🍜 Appetizers</button>
-  <button class="active">🍝 Main Courses</button>
-  <button class="active">🥗 Salads & Sides</button>
-  <button class="active">🌱 Vegetarian Delights</button>
-  <button class="active">🌍 International Flavors</button>
-  <button  class="active">🍰 Desserts & Sweets</button>
-  <button class="active">💪 Healthy Eats</button>
-  <button class="active">⏱️ Quick & Easy Supper</button>
+  <button (click)="setCategory('All Types')" class="active">🍲 All Types</button>
+  <button (click)="setCategory('Appetizers')" class="active">🍜 Appetizers</button>
+  <button (click)="setCategory('Main Courses')" class="active">🍝 Main Courses</button>
+  <button (click)="setCategory('Salads & Sides')" class="active">🥗 Salads & Sides</button>
+  <button (click)="setCategory('Vegetarian Delights')" class="active">🌱 Vegetarian Delights</button>
+  <button (click)="setCategory('International Flavors')" class="active">🌍 International Flavors</button>
+  <button (click)="setCategory('Desserts & Sweets')" class="active">🍰 Desserts & Sweets</button>
+  <button (click)="setCategory('Healthy Eats')" class="active">💪 Healthy Eats</button>
+  <button (click)="setCategory('Quick & Easy Supper')" class="active">⏱️ Quick & Easy Supper</button>
 </div>
 
-<div class="recipes-grid">
-  <div class="recipe-card">
-    <img src="salad.jpg" alt="Fresh Salad" />
-    <h3>Fresh Salad with Tahini Sauce</h3>
-    <p>👁️ 250+</p>
-    <button routerLink="/instructions">See Complete Recipe</button>
-  </div>
-
-  <div class="recipe-card">
-    <img src="chilichicken.jpg" alt="Chili con Carne" />
-    <h3>Chili con Carne with Nachos Chips</h3>
-    <p>👁️ 150+</p>
-    <button routerLink="/instructions">See Complete Recipe</button>
-  </div>
-
-  <div class="recipe-card">
-    <img src="koreankimchi.jpg" alt="Korean Kimchi" />
-    <h3>Sour & Spicy Korean Kimchi</h3>
-    <p>👁️ 200+</p>
-    <button routerLink="/instructions">See Complete Recipe</button>
-  </div>
-</div>
+<!-- Pass the selected category to app-recipies -->
+<app-recipies [category]="selectedCategory"></app-recipies>

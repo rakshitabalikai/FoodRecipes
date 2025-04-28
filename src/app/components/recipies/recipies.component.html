@@ -2,7 +2,8 @@
   <div class="recipe-card" *ngFor="let recipe of recipes">
     <img [src]="recipe.image" [alt]="recipe.title" />
     <h3>{{ recipe.title }}</h3>
+    <button type="button" [routerLink]="['/instructions', recipe.id]">See Complete Recipe</button>
     <p>👁️ 250+</p> <!-- You can replace with dynamic view count if available -->
-    <!-- <button type="button" [routerLink]="['/instructions', recipe.id]">See Complete Recipe</button> -->
+    
   </div>
 </div>

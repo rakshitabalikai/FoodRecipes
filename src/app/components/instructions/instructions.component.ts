@@ -1,35 +1,37 @@
-import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { Recipe } from '../../models/recipe';
+import { RecipeService } from '../../recipes.service';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-instructions',
-  imports: [NgFor],
+  standalone: true, // <-- you must add standalone if it's not already
+  imports: [CommonModule, RouterModule],
+  providers: [RecipeService], // <-- ADD THIS LINE
   templateUrl: './instructions.component.html',
-  styleUrl: './instructions.component.scss'
+  styleUrls: ['./instructions.component.scss']
 })
+export class InstructionsComponent implements OnInit {
+  recipe!: Recipe;
 
-export class InstructionsComponent {
-  recipe = {
-    title: 'Sweet apple squares',
-    subtitle: 'With cinnamon and thyme',
-    rating: 4,
-    servings: 2,
-    time: '15 minutes',
-    ingredients: [
-      '100 ml milk',
-      '50 g butter',
-      '3 eggs',
-      '1 tbs cocoa',
-      '2 tsp baking soda',
-      'a pinch of salt',
-      '3 eggs'
-    ],
-    directions: [
-      'Nunc nulla velit, feugiat vitae ex quis, lobortis porta leo.',
-      'Donec dictum lectus in ex accumsan sodales. Pellentesque habitant morbi tristique.',
-      'Repeat previous step as needed.',
-      'Habitat morbi tristique. Donec dictum lectu.',
-      'Final step with style and flavor!'
-    ]
-  };
+  constructor(
+    private route: ActivatedRoute, // works now
+    private recipeService: RecipeService
+  ) {}
+
+  ngOnInit(): void {
+    const recipeId = this.route.snapshot.paramMap.get('id');
+    if (recipeId) {
+      this.recipeService.getRecipeById(recipeId).subscribe({
+        next: (data) => {
+          this.recipe = data;
+        },
+        error: (err) => {
+          console.error('Error fetching recipe:', err);
+        }
+      });
+    }
+  }
 }

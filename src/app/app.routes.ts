@@ -22,8 +22,8 @@ export const routes: Routes = [
         component:RecipiesComponent
     },
     {
-        path:"instructions",
-        component:InstructionsComponent
+        path: "instructions/:id",
+        component: InstructionsComponent
     },
     {
         path:"blog",
